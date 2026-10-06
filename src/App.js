@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 import './App.css';
 
 // Testing multiple components 
@@ -7,8 +7,9 @@ const Person = () => {
 
   return (
     <>
-      <h3>Nickname : Max</h3>
-      <h3>The time is : {new Date().toLocaleTimeString()} </h3>
+      <h3>Nickname : Max
+      &nbsp; , &nbsp;  
+      The time is : {new Date().toLocaleTimeString()} </h3>
     </>
   );
 }
@@ -17,13 +18,35 @@ const Person = () => {
 const Crew = (props) => {
   return (
     <>
-      <hr />
       <p>Nickname : {props.nickname} &nbsp; , &nbsp; 
-      <span>Age: {props.age} </span></p>
-      <hr />
+      <span>Age: {props.age} </span></p> 
     </>
   );
 }
+
+
+// Using states in react 
+// States are used to store data that can change over time
+// Firstly we need to import useState from react
+const StatesExample = () => {
+
+  // useState is a hook that allows us to add state to functional components
+  // useState returns an array with two elements, the current state value and a function to update it
+  // it is good practice to call second element same as name of state but add a set, 
+  // because it is a setter function for the first variable 
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <h3>States in React</h3>
+      <button onClick={() => setCount(count + 1)}>Increment Button For React State : </button>
+      <h3>{count}</h3>
+      <button onClick={() => setCount(count - 1)}>Decrement Button For React State : </button>
+    </>
+  );
+}
+
+
 
 
 // const can be used instead of a generic function keyword infront of function name 
@@ -39,21 +62,19 @@ const App = () => {
     <div className="App">
       <>
         <h1>{appname}</h1>
-        <h2>Developed by: {developername}</h2>
-        <p>{purpose}</p>
-        <p>Copyright &copy; {copyrightyear}</p>
-        <p>Current Date: {currentdate.toDateString()}</p>
+        <h2>Developed by: {developername} &nbsp; , &nbsp;  
+          Copyright &copy; {copyrightyear} &nbsp; , &nbsp; 
+          Current Date: {currentdate.toDateString()}
+        </h2> 
         <hr />
+        <p>Purpose : {purpose}</p>
         <p>
-          
           Calling a component inside another component <Person />
           We can call multiple components within other components eg Person, Car, House etc 
-
         </p>
-        <Crew nickname="Thor" age="25" />
-        <Crew nickname="Spiderman" age="30" />
         <Crew nickname="Superman" age="28" />
         <Crew nickname="Young Dolph" age="35" />
+        <StatesExample />
 
       </>
     </div>
