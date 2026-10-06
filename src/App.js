@@ -1,6 +1,20 @@
 
 import './App.css';
 
+// Testing multiple components 
+// A component renders back jsx 
+const Person = () => {
+
+  return (
+    <>
+      <h3>Nickname : Max</h3>
+      <h3>The time is : {new Date().toLocaleTimeString()} </h3>
+    </>
+  );
+}
+
+
+
 
 // const can be used instead of a generic function keyword infront of function name 
 const App = () => {
@@ -19,6 +33,10 @@ const App = () => {
         <p>{purpose}</p>
         <p>Copyright &copy; {copyrightyear}</p>
         <p>Current Date: {currentdate.toDateString()}</p>
+        <hr />
+        <p>
+          Calling a component inside another component <Person />
+        </p>
       </>
     </div>
   );
