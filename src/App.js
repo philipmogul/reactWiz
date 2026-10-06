@@ -13,7 +13,17 @@ const Person = () => {
   );
 }
 
-
+// Components & props 
+const Crew = (props) => {
+  return (
+    <>
+      <hr />
+      <p>Nickname : {props.nickname} &nbsp; , &nbsp; 
+      <span>Age: {props.age} </span></p>
+      <hr />
+    </>
+  );
+}
 
 
 // const can be used instead of a generic function keyword infront of function name 
@@ -35,8 +45,16 @@ const App = () => {
         <p>Current Date: {currentdate.toDateString()}</p>
         <hr />
         <p>
+          
           Calling a component inside another component <Person />
+          We can call multiple components within other components eg Person, Car, House etc 
+
         </p>
+        <Crew nickname="Thor" age="25" />
+        <Crew nickname="Spiderman" age="30" />
+        <Crew nickname="Superman" age="28" />
+        <Crew nickname="Young Dolph" age="35" />
+
       </>
     </div>
   );
