@@ -14,6 +14,22 @@ const Person = () => {
   );
 }
 
+// Different hooks in react
+const DiffHooks = () => {
+  return (
+    <>
+      <h3>Different Hooks in React</h3>
+      <p>The following are some of the most commonly used hooks in React:</p>
+      <ul>
+        <li><strong>useState:</strong> Allows you to add state to functional components.</li>
+        <li><strong>useEffect:</strong> Lets you perform side effects in functional components.</li>
+        <li><strong>useContext:</strong> Allows you to access context values in functional components.</li>
+      </ul>
+    </>
+  );
+}
+
+
 // Components & props 
 const Crew = (props) => {
   return (
@@ -29,7 +45,6 @@ const Crew = (props) => {
 // States are used to store data that can change over time
 // Firstly we need to import useState from react
 const StatesExample = () => {
-
   // useState is a hook that allows us to add state to functional components
   // useState returns an array with two elements, the current state value and a function to update it
   // it is good practice to call second element same as name of state but add a set, 
@@ -38,15 +53,40 @@ const StatesExample = () => {
 
   return (
     <>
-      <h3>States in React</h3>
+      <h3>States & Events in React</h3>
+      <p> Events are simply the functions that are triggered when an user interacts with the component. 
+        E.g. Button onclick , does a specified function. </p>
       <button onClick={() => setCount(count + 1)}>Increment Button For React State : </button>
-      <h3>{count}</h3>
+       &nbsp; <strong><span>{count}</span> </strong> &nbsp;
       <button onClick={() => setCount(count - 1)}>Decrement Button For React State : </button>
+
     </>
   );
 }
 
+// Another React hook called useEffect 
+const UseEffectExample = () => {
 
+
+
+ return(
+    <>
+      <h3> UseEffect in React </h3>
+
+
+
+    </>
+ );
+}
+
+
+const UseContextExample = () => {
+  return(
+    <>
+      <h3> UseContext in React </h3>
+    </>
+  );
+}
 
 
 // const can be used instead of a generic function keyword infront of function name 
@@ -74,8 +114,10 @@ const App = () => {
         </p>
         <Crew nickname="Superman" age="28" />
         <Crew nickname="Young Dolph" age="35" />
+        <DiffHooks />
         <StatesExample />
-
+        <UseEffectExample />
+        <UseContextExample />
       </>
     </div>
   );
