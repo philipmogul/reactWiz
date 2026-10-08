@@ -1,4 +1,7 @@
 import {useState} from 'react';
+
+import MovieCard from './MovieCard.jsx';
+
 import './App.css';
 
 // Testing multiple components 
@@ -87,6 +90,9 @@ const UseContextExample = () => {
     </>
   );
 }
+
+const OMDB_API = "f9d0d859";
+//OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=f9d0d859 
 
 
 // const can be used instead of a generic function keyword infront of function name 
