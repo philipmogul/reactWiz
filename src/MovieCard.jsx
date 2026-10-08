@@ -1,12 +1,17 @@
 import React from "react";
 
-const MovieCard = (props) => {
+const MovieCard = ({movieData}) => {
   return (
-    <>
-      <h3>{props.title}</h3>
-      <p>Year: {props.year}</p>
-      <p>Genre: {props.genre}</p>
-    </>
+    <div className="movie">
+          <div>
+            <img src={movieData.Poster !== 'N/A' ? movieData.Poster : 'https://via.placeholder.com/300x450?text=No+Image'} alt={movieData.Title} />
+          </div>
+          <div>
+            <span>{movieData.Title}</span> &nbsp; | &nbsp; 
+            <span>{movieData.Year} </span> &nbsp; | &nbsp; 
+            <span>{movieData.Type}</span>
+          </div>
+        </div>
   );
 };
 
