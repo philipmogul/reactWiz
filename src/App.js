@@ -1,5 +1,5 @@
 import {useState , useEffect } from 'react';
-
+import Forms from './components/Forms';
 import MovieCard from './MovieCard';
 
 import './App.css';
@@ -203,6 +203,7 @@ const App = () => {
         </p>
         <Crew nickname="Superman" age="28" />
         <Crew nickname="Young Dolph" age="35" />
+        <Forms />
         <DiffHooks />
         <StatesExample />
         <UseEffectExample />
