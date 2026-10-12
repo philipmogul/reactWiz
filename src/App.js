@@ -1,8 +1,10 @@
 import {useState , useEffect } from 'react';
 import Forms from './components/Forms';
+import FormsWithHooks from './components/FormsWithHooks';
 import MovieCard from './MovieCard';
 
 import './App.css';
+import { Form } from 'react-hook-form';
 
 // Testing multiple components 
 // A component renders back jsx 
@@ -204,6 +206,7 @@ const App = () => {
         <Crew nickname="Superman" age="28" />
         <Crew nickname="Young Dolph" age="35" />
         <Forms />
+        <FormsWithHooks />
         <DiffHooks />
         <StatesExample />
         <UseEffectExample />
