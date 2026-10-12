@@ -162,6 +162,21 @@ const MovieList = () => {
   );
 }
 
+const ReactLists = () => {
+  const fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+  return (
+    <>
+      <h3>Rendering Lists in React: Mostly by use of Array.map()</h3>
+      <ul>
+        {fruits.map((fruit, index) => (
+          <li key={index}>{fruit}</li>
+        ))}
+      </ul>
+    </>
+  );
+} 
+
 
 // const can be used instead of a generic function keyword infront of function name 
 const App = () => {
@@ -192,6 +207,7 @@ const App = () => {
         <StatesExample />
         <UseEffectExample />
         <UseContextExample />
+        <ReactLists />
         <MovieList />
         
 
