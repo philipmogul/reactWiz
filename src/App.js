@@ -2,6 +2,7 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import { Link } from 'react-router-dom';
+import MovieSearch from './pages/MoviesSearch';
 
 // const can be used instead of a generic function keyword infront of function name 
 const App = () => {
@@ -17,13 +18,15 @@ const App = () => {
         <nav>
           <Link to="/">Landing</Link> &nbsp; | &nbsp;
           <Link to="/home">Home</Link> &nbsp; | &nbsp;
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile">Profile</Link> &nbsp; | &nbsp;
+          <Link to="/movies">Movies</Link>
         </nav>
 
         <Routes>
           <Route path="/" element={<h1>Landing Page</h1>} />
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/movies" element={<MovieSearch />} />
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>
         
