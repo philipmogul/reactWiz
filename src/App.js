@@ -1,6 +1,8 @@
 import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Login from './Login';
+import Signup from './Signup';
 import { Link } from 'react-router-dom';
 import MovieSearch from './pages/MoviesSearch';
 
@@ -19,7 +21,9 @@ const App = () => {
           <Link to="/">Landing</Link> &nbsp; | &nbsp;
           <Link to="/home">Home</Link> &nbsp; | &nbsp;
           <Link to="/profile">Profile</Link> &nbsp; | &nbsp;
-          <Link to="/movies">Movies</Link>
+          <Link to="/movies">Movies</Link> &nbsp; | &nbsp;
+          <Link to="/login">Login</Link> &nbsp; | &nbsp;
+          <Link to="/signup">Signup</Link>
         </nav>
 
         <Routes>
@@ -27,6 +31,8 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/movies" element={<MovieSearch />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>
         
