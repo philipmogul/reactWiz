@@ -6,13 +6,13 @@ export default function Login() {
         <div>
         <h1>Login Page</h1>
         </div>
-        <form onSubmit={(e) => {
+        <form class="form-control" onSubmit={(e) => {
             e.preventDefault();
             // Handle login logic here
         }} >
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Login</button>
+            <input type="text" placeholder="Username" /> <br />
+            <input type="password" placeholder="Password" /> <br />
+            <button type="submit" class="btn btn-primary" >Login</button>
         </form>
     </>
   );
